@@ -7,12 +7,12 @@
  * classes, methods, and data structures that you need to solve the
  * problem and display your solution in the correct format.
  */
-//package compsci424.p1.java;
+package compsci424.p1.java;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-//import compsci424.p1.java.Version1;
+import compsci424.p1.java.Version1;
 
 /**
  * Main class for this program. The required steps have been copied
