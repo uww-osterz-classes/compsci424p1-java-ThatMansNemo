@@ -76,10 +76,7 @@ public class Program1 {
         }
         
     }
-    long startTimeV1 = System.currentTimeMillis();
-    long endTimeV1 = System.currentTimeMillis();
-        long runningTimeV1 = endTimeV1 - startTimeV1;
-        System.out.println("Version 1 running time: " + runningTimeV1 + " milliseconds.");
+    
 
 }
 // 1. Ask the user to enter commands of the form "create N",
