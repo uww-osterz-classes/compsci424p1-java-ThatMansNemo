@@ -7,12 +7,12 @@
  * classes, methods, and data structures that you need to solve the
  * problem and display your solution in the correct format.
  */
-package compsci424.p1.java;
+//package compsci424.p1.java;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import compsci424.p1.java.Version1;
+//import compsci424.p1.java.Version1;
 
 /**
  * Main class for this program. The required steps have been copied
@@ -48,10 +48,9 @@ public class Program1 {
                     int parsedInput = Integer.parseInt(input);
                     if (parsedInput < 0 || parsedInput > 15) {
                         System.out.println("wrong number");
-                    }
-                    else{
-                    int parsedV1 = v1.create(parsedInput);
-                    v1.showProcessInfo();
+                    } else {
+                        int parsedV1 = v1.create(parsedInput);
+                        v1.showProcessInfo();
                     }
                 }
 
@@ -70,15 +69,71 @@ public class Program1 {
                         System.out.println("wrong number");
                     }
                     int parsedV1 = v1.destroy(parsedInput);
-              v1.showProcessInfo();
-                }
-            }
-        }
-        
-    }
-    
+                    v1.showProcessInfo();
 
+                }
+            }for (int i = 0; i < 200; i++) {
+            long startTimeV1 = System.currentTimeMillis();
+            long endTimeV1 = System.currentTimeMillis();
+            long durationV1 = (endTimeV1 - startTimeV1) / 1000;
+            System.out.println("\nVersion 1 Running Time: " + durationV1 + " milliseconds");
+        }
+
+        System.out.println("now starting version 2");
+        Version2 v2 = new Version2(16);
+        while (true) {
+            System.out.println("choose between:create n, destroy n,end");
+            String inputString = sc.nextLine();
+            if (inputString.equalsIgnoreCase("end")) {
+                break;
+
+            } else if (inputString.equalsIgnoreCase("create N")) {
+                while (inputString.equalsIgnoreCase("create N") || inputString.equalsIgnoreCase("destroy n")) {
+                    System.out.println("enter a number 1-15");
+                    String input = sc.nextLine();
+                    if (input.equalsIgnoreCase("end")) {
+                        break;
+                    }
+                    if (input.equalsIgnoreCase("destroy n")) {
+                        break;
+                    }
+                    int parsedInput = Integer.parseInt(input);
+                    if (parsedInput < 0 || parsedInput > 15) {
+                        System.out.println("wrong number");
+                    } else {
+                        int parsedV1 = v2.create(parsedInput);
+                        v2.showProcessInfo();
+                    }
+                }
+
+            } else if (inputString.equalsIgnoreCase("destroy n")) {
+                while (inputString.equalsIgnoreCase("create N") || inputString.equalsIgnoreCase("destroy n")) {
+                    System.out.println("enter a number 1-15");
+                    String input = sc.nextLine();
+                    if (input.equalsIgnoreCase("end")) {
+                        break;
+                    }
+                    if (input.equalsIgnoreCase("create n")) {
+                        break;
+                    }
+                    int parsedInput = Integer.parseInt(input);
+                    if (parsedInput < 0 || parsedInput > 16) {
+                        System.out.println("wrong number");
+                    }
+                    int parsedV1 = v2.destroy(parsedInput);
+                    v2.showProcessInfo();
+
+                }
+            }for (int i = 0; i < 200; i++) {
+            long startTimeV2 = System.currentTimeMillis();
+            long endTimeV2 = System.currentTimeMillis();
+            long durationV2 = (endTimeV2 - startTimeV2) / 1000;
+            System.out.println("Version 2 Running Time: " + durationV2 + " milliseconds");
+        }
+
+    }
 }
+
 // 1. Ask the user to enter commands of the form "create N",
 // "destroy N", or "end", where N is an integer between 0
 // and 15.
