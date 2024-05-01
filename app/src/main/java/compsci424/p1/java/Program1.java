@@ -7,7 +7,7 @@
  * classes, methods, and data structures that you need to solve the
  * problem and display your solution in the correct format.
  */
-//package compsci424.p1.java;
+package compsci424.p1.java;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -83,7 +83,7 @@ public class Program1 {
         Version2 v2 = new Version2(16);
         while (true) {
             System.out.println("choose between:create n, destroy n,end");
-            String inputString = sc.nextLine();
+            /*String*/ inputString = sc.nextLine(); /*** commented out the word "String" to remove an error ***/
             if (inputString.equalsIgnoreCase("end")) {
                 break;
 
@@ -130,9 +130,10 @@ public class Program1 {
             long durationV2 = (endTimeV2 - startTimeV2) / 1000;
             System.out.println("Version 2 Running Time: " + durationV2 + " milliseconds");
         }
-
+    } /*** added by Dr. Oster to end the while loop that started on line 84 ***/
     }
 }
+} /*** added by Dr. Oster to complete class body ***/
 
 // 1. Ask the user to enter commands of the form "create N",
 // "destroy N", or "end", where N is an integer between 0

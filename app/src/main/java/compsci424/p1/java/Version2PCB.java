@@ -1,3 +1,5 @@
+package compsci424.p1.java;
+
 public class Version2PCB {
 	int parent;
 	int firstChild;

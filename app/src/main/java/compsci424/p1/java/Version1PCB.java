@@ -1,5 +1,5 @@
-import java.util.LinkedList;
 package compsci424.p1.java;
+import java.util.LinkedList;
 
 public class Version1PCB {
 
